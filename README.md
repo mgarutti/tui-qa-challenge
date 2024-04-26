@@ -1,8 +1,12 @@
-# Q&A Code Assessment
+# QA Code Assessment
 
 Thanks for joining us today and many thanks for your time.
 
-This repository contains a simple web application that includes a login form and a protected page that lists products read from a downstream service. The purpose of this assessment is to identify any flaws or security concerns and describe test cases for this software.
+
+Contained within this repository is a basic web application. This application features a login form and a secure page that displays a list of products, which are retrieved from a downstream service. The primary objective of this assessment is:
+
+- Bug Identification: Your first task is to scrutinize the project and uncover any existing bugs or security vulnerabilities.
+- Test Automation: Following this, you are required to develop automated tests for the software.
 
 ## Getting Started
 
@@ -15,7 +19,7 @@ $ npm i
 Then you should be able to start the application:
 
 ```
-$ npm run serve
+$ npm run dev
 ```
 
 After that application should be running and you should be able to load it using your browser pointing to http://localhost:3000.
@@ -24,7 +28,7 @@ After that application should be running and you should be able to load it using
 
 Your task is to perform a thorough quality assurance assessment on the provided code. This includes but is not limited to:
 
-1. **Identifying Flaws**: Look for any bugs, errors, or issues within the code. This could be anything from flow errors to logical flaws.
+1. **Identifying Flaws**: Look for any bugs, errors, or issues within the code. This could be anything from flow errors to logical flaws. Your list should also contain a proper prioritization.
 
 2. **Security Concerns**: Assess the code for potential security vulnerabilities. Consider aspects such as data validation, error handling, and secure communication with the downstream service.
 
@@ -34,9 +38,9 @@ Your task is to perform a thorough quality assurance assessment on the provided 
 
 At the end of the assessment, you should provide:
 
-1. A detailed report outlining any identified flaws and security concerns, along with recommendations for improvement.
-2. A comprehensive set of test cases, clearly described and ready to be executed.
-3. Any other observations or suggestions you may have to improve the quality of the software.
+1. A **detailed report** outlining any identified flaws and security concerns, along with recommendations for improvement and with the proper priority flag.
+2. A **comprehensive set of test cases**, clearly described and ready to be executed. We expect 3 to 4 automated test cases (preference to Typescript or Playwright) and a README file with detailed instructions on how to run tests.
+3. Any other **observations or suggestions** you may have to improve the quality of the software.
 
 ## Conclusion
 
