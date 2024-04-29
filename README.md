@@ -2,15 +2,11 @@
 
 Thanks for joining us today and many thanks for your time.
 
-
-Contained within this repository is a basic web application. This application features a login form and a secure page that displays a list of products, which are retrieved from a downstream service. The primary objective of this assessment is:
-
-- Bug Identification: Your first task is to scrutinize the project and uncover any existing bugs or security vulnerabilities.
-- Test Automation: Following this, you are required to develop automated tests for the software.
+Contained within this repository is a basic web application. This application features a login form and a secure page that displays a list of products, which are retrieved from a downstream service.
 
 ## Getting Started
 
-You should first clone the repository on your local machine andI install the dependencies:
+You should first clone the repository on your local machine and install the dependencies:
 
 ```
 $ npm i
@@ -22,13 +18,13 @@ Then you should be able to start the application:
 $ npm run dev
 ```
 
-After that application should be running and you should be able to load it using your browser pointing to http://localhost:3000.
+Application should be running and you should be able to load it using your browser pointing to http://localhost:3000.
 
 ## Task
 
 Your task is to perform a thorough quality assurance assessment on the provided code. This includes but is not limited to:
 
-1. **Identifying Flaws**: Look for any bugs, errors, or issues within the code. This could be anything from flow errors to logical flaws. Your list should also contain a proper prioritization.
+1. **Identifying Flaws**: Your first task is to scrutinize the project and uncover any existing bugs, errors, or issues within the code. This could be anything from flow errors to logical flaws. Your list should also contain a proper prioritization.
 
 2. **Security Concerns**: Assess the code for potential security vulnerabilities. Consider aspects such as data validation, error handling, and secure communication with the downstream service.
 
