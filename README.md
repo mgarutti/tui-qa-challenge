@@ -34,7 +34,7 @@ Your task is to perform a thorough quality assurance assessment on the provided 
 
 At the end of the assessment, you should provide:
 
-1. A **detailed report** outlining any identified flaws and security concerns, along with recommendations for improvement and with the proper priority flag.
+1. A **detailed report** outlining any identified flaws and security concerns, along with recommendations for improvement and with the proper priority flag (high, medium and low).
 2. A **comprehensive set of test cases**, clearly described and ready to be executed. We expect 3 to 4 automated test cases (preference to Typescript or Playwright) and a README file with detailed instructions on how to run tests.
 3. Any other **observations or suggestions** you may have to improve the quality of the software.
 
