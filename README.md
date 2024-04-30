@@ -20,6 +20,18 @@ $ npm run dev
 
 Application should be running and you should be able to load it using your browser pointing to http://localhost:3000.
 
+## Login
+
+This Code Assessment relies on dummyJSON's services for authentication and product listing. So you should use one of the valid users for login. For example:
+
+Username: atuny0 \
+Password: 9uQFF1Lh
+
+Username: hbingley1 \
+Password: CQutx25i8r
+
+Further instructions can be found at [dummyJSON](https://dummyjson.com/docs/auth).
+
 ## Task
 
 Your task is to perform a thorough quality assurance assessment on the provided code. This includes but is not limited to:
