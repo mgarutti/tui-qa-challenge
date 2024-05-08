@@ -30,6 +30,29 @@ app.post('/login', async (req: Request, res: Response) => {
 
   const LOGIN_URL = 'https://dummyjson.com/auth/login';
 
+  //temporary fix for axios errror
+
+  /*axios(LOGIN_URL, {
+    method: "post",
+    withCredentials: true,
+    data: {
+      username,
+      password
+    },
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    }
+  }).then(function(response) {
+    console.log('Authenticated');
+    const user = response.data;
+    res.send(user);
+  }).catch(function(error) {
+    console.log('Error on Authentication');
+    const errorStatus = error.response.status;
+    res.send(errorStatus);
+  });*/
+
   const credentials = {
     username,
     password,
@@ -42,7 +65,7 @@ app.post('/login', async (req: Request, res: Response) => {
     })
   ).data;
 
-  res.send(user);
+  res.send(user); 
 });
 
 app.post('/cart', async (req: Request, res: Response) => {
