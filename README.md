@@ -1,57 +1,50 @@
-# QA Code Assessment
+# QA Code Assessment - Marco Garutti
 
-Thanks for joining us today and many thanks for your time.
+This is my approach on the Code Assessment. This current branch (test/playwright-qa) contains the code from the original repo (main branch), with the addition to Playwright.
+I opted by this approach so would be easier to run the server locally, but also because I believe that using the same repository for both test and development can be really usefull for the team.
 
-Contained within this repository is a basic web application. This application features a login form and a secure page that displays a list of products, which are retrieved from a downstream service.
+## Issues encountered during testing
 
-## Getting Started
+Before starting the automation, I did an exploratory test to know how the application was behaving, and I found some issues during my analysis. These issues can be found at the "Issues" tab
+for this repo (or going to https://github.com/mgarutti/tui-qa-challenge/issues). All issues contains a brief description, an screenshot (when available) and the steps to reproduce it.
+Also, there are some minor issues/enhancements suggestions.
+
+## Getting Started and running the tests
 
 You should first clone the repository on your local machine and install the dependencies:
 
 ```
 $ npm i
 ```
-
-Then you should be able to start the application:
+There are a number of ways to run the Playwright tests.
+To run ALL of the existing Playwright tests:
 
 ```
-$ npm run dev
+$ npx playwright test
 ```
 
-Application should be running and you should be able to load it using your browser pointing to http://localhost:3000.
+To run a specific set of tests, grouped by tags:
 
-## Login
+```
+$ npx playwright test --grep "@dashboard"
+```
+```
+$ npx playwright test --grep "@login"
+```
 
-This Code Assessment relies on dummyJSON's services for authentication and product listing. So you should use one of the valid users for login. For example:
+Or, if you want to run the smoke suite:
 
-Username: atuny0 \
-Password: 9uQFF1Lh
+```
+$ npx playwright test --grep "@smoke"
+```
 
-Username: hbingley1 \
-Password: CQutx25i8r
+If the test fails, the report will be displayed automatically, but if you want to check the latest report available, just run the following command:
 
-Further instructions can be found at [dummyJSON](https://dummyjson.com/docs/auth).
+```
+$ npx playwright show-report
+```
 
-## Task
+## GitHub Actions workflow
 
-Your task is to perform a thorough quality assurance assessment on the provided code. This includes but is not limited to:
-
-1. **Identifying Flaws**: Your first task is to scrutinize the project and uncover any existing bugs, errors, or issues within the code. This could be anything from flow errors to logical flaws. Your list should also contain a proper prioritization.
-
-2. **Security Concerns**: Assess the code for potential security vulnerabilities. Consider aspects such as data validation, error handling, and secure communication with the downstream service.
-
-3. **Test Cases**: Write detailed test cases to ensure the software functions as expected. This should cover both positive (expected usage) and negative (handling of unexpected inputs or conditions) scenarios.
-
-## Deliverables
-
-At the end of the assessment, you should provide:
-
-1. A **detailed report** outlining any identified flaws and security concerns, along with recommendations for improvement and with the proper priority flag (high, medium and low).
-2. A **comprehensive set of test cases**, clearly described and ready to be executed. We expect 3 to 4 automated test cases (preference to Typescript or Playwright) and a README file with detailed instructions on how to run tests.
-3. Any other **observations or suggestions** you may have to improve the quality of the software.
-
-## Conclusion
-
-This assessment is designed to test your ability to critically analyze a piece of software from a quality assurance perspective. Take your time, be thorough, and remember to justify your findings and recommendations.
-
-Good luck!
+Every time that there is a pull request or a push to the selected branches, the GitHub Actions workflow will be triggered. You can check the workflows here:
+https://github.com/mgarutti/tui-qa-challenge/actions 
