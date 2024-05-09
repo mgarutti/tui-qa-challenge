@@ -19,7 +19,7 @@ tag: ['@login', '@smoke'],
   await DASHBOARD_PAGE.validateThatDashboardPageIsDisplayed();
 });
 
-test('002 - User should not login with empty credentials', {
+test('002 - User should not be able to login with empty credentials', {
 tag: ['@login', '@smoke'],
 }, async ({ page }) => {
   const LOGIN_PAGE = new LoginPage(page);
