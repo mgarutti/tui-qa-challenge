@@ -55,8 +55,12 @@ export class DashboardPage {
     await expect(this.logoutBtn).toBeVisible();
   }
 
+  async clickLogoutButton() {
+    await this.logoutBtn.click();
+  }
+
   async validateThatProductListTableIsNotEmpty() {
-    const tableRows = (await this.productListRow.count());
+    let tableRows = (await this.productListRow.count());
     expect(tableRows).toBeGreaterThan(1);
     let columnsCount = 0
     for (let i = 0; i < tableRows; ++i) {
