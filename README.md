@@ -17,25 +17,26 @@ You should first clone the repository on your local machine and install the depe
 $ npm i
 ```
 There are a number of ways to run the Playwright tests.
+Currently, since the Username and Password are env variables, their value must be passed through the command line in order to execute the tests locally.
 To run ALL of the existing Playwright tests:
 
 ```
-$ npx playwright test
+$ LOGIN_USERNAME=typeuserhere LOGIN_PASSWORD=typepasshere npx playwright test
 ```
 
 To run a specific set of tests, grouped by tags:
 
 ```
-$ npx playwright test --grep "@dashboard"
+$ LOGIN_USERNAME=typeuserhere LOGIN_PASSWORD=typepasshere npx playwright test --grep "@dashboard"
 ```
 ```
-$ npx playwright test --grep "@login"
+$ LOGIN_USERNAME=typeuserhere LOGIN_PASSWORD=typepasshere npx playwright test --grep "@login"
 ```
 
 Or, if you want to run the smoke suite:
 
 ```
-$ npx playwright test --grep "@smoke"
+$ LOGIN_USERNAME=typeuserhere LOGIN_PASSWORD=typepasshere npx playwright test --grep "@smoke"
 ```
 
 If the test fails, the report will be displayed automatically, but if you want to check the latest report available, just run the following command:
